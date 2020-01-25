@@ -9,9 +9,9 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Ranked input</h1>
-      <RankInput scheme={LoLMobileRankScheme} value={lolPoint} onChange={setLoLPoint}/>
+      <RankInput scheme={LoLRankScheme} value={lolPoint} onChange={setLoLPoint}/>
       <br/>
-      <RankInput scheme={LoLRankScheme} value={lolMobilePoint} onChange={setLolMobilePoint}/>
+      <RankInput scheme={LoLMobileRankScheme} value={lolMobilePoint} onChange={setLolMobilePoint}/>
       <br/>
     </div>
   );
