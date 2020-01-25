@@ -9,19 +9,19 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 3
+            count: 4
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 3
+            count: 4
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 3
+            count: 4
           }
         },
       ]
@@ -32,19 +32,19 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 4
+            count: 5
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 4
+            count: 5
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 4
+            count: 5
           }
         },
       ]
@@ -55,25 +55,25 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 4
+            count: 5
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 4
+            count: 5
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 4
+            count: 5
           }
         },
         {
           name: "DIVISION IV",
           points: {
-            count: 4
+            count: 5
           }
         },
       ]
@@ -84,31 +84,31 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION IV",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION V",
           points: {
-            count: 5
+            count: 6
           }
         },
       ]
@@ -119,31 +119,31 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION IV",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION V",
           points: {
-            count: 5
+            count: 6
           }
         },
       ]
@@ -154,31 +154,31 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION III",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION IV",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION V",
           points: {
-            count: 5
+            count: 6
           }
         },
       ]
@@ -189,13 +189,13 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION I",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION II",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
@@ -207,13 +207,13 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION IV",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
           name: "DIVISION V",
           points: {
-            count: 5
+            count: 6
           }
         },
       ]
