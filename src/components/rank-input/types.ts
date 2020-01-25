@@ -1,5 +1,6 @@
 type Points = {
     count: number;
+    name?: string;
     step?: number;
 };
 

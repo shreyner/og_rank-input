@@ -360,27 +360,19 @@ export const LoLRankScheme: RankScheme = {
           name: "II",
           points: {
             count: 100,
+            name: "SSS",
           }
         },
         {
           name: "I",
-          points: {
-            count: 100,
-          }
         }
       ]
     },
     {
-      name: "Master",
-      points: {
-        count: 1000
-      },
+      name: "Master"
     },
     {
-      name: "Challenger",
-      points: {
-        count: 1000
-      },
+      name: "Challenger"
     }
   ]
 };

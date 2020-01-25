@@ -3,7 +3,7 @@ import {Rank} from "./types";
 type NormalizedRank = {
   name: string;
   children?: NormalizedRank[];
-  points?: number[];
+  points?: { name?: string, count: number }[];
   minValue: number;
   maxValue: number;
 }
@@ -14,13 +14,20 @@ export const normalizerRankScheme = (rankScheme: ReadonlyArray<Rank>, lastObject
 
     const points =
       item.points !== undefined
-        ? Array.from(Array(item.points.count)).map(() => lastObject.counter++)
+        ? Array.from(Array(item.points.count)).map(() => ({
+          name: (item.points as { name?: string }).name,
+          count: lastObject.counter++
+        }))
         : undefined;
 
     const children =
       item.rank !== undefined
         ? normalizerRankScheme(item.rank, lastObject)
         : undefined;
+
+    if (!points && !children) {
+      lastObject.counter++;
+    }
 
     acc.push({
       name: item.name,
@@ -34,7 +41,7 @@ export const normalizerRankScheme = (rankScheme: ReadonlyArray<Rank>, lastObject
   }, []);
 };
 
-type SelectOptions  = {
+type SelectOptions = {
   name: string;
   value: string;
   selected?: boolean;
@@ -85,9 +92,9 @@ export const generateElements = (normalizedData: NormalizedRank[], value: number
         elements[selectedName + "_points"] = {
           name: selectedName + "_points",
           options: currentItem.points.map((item: any, index: number) => ({
-            name: `${index} ${pointName}`,
-            value: item,
-            selected: item === value
+            name: `${index} ${item.name || pointName}`,
+            value: item.count,
+            selected: item.count === value
           }))
         } as SelectElement;
       }
