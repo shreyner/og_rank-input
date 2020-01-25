@@ -1,15 +1,15 @@
 import {Rank} from "./types";
 
-type A = {
+type NormalizedRank = {
   name: string;
-  children?: A[];
+  children?: NormalizedRank[];
   points?: number[];
   minValue: number;
   maxValue: number;
 }
 
-export const normalizerRankScheme = (rankScheme: ReadonlyArray<Rank>, lastObject = {counter: 0}): A[] => {
-  return rankScheme.reduce<A[]>((acc, item) => {
+export const normalizerRankScheme = (rankScheme: ReadonlyArray<Rank>, lastObject = {counter: 0}): NormalizedRank[] => {
+  return rankScheme.reduce<NormalizedRank[]>((acc, item) => {
     let minValue = lastObject.counter;
 
     const points =
@@ -40,17 +40,17 @@ type SelectOptions  = {
   selected?: boolean;
 }
 
-type B = {
+type SelectElement = {
   name: string;
   options: SelectOptions[];
   value: string;
   selected: boolean;
 };
 
-export const generateElements = (data1: A[], value: number, pointName: string): B[] => {
-  let lastElements: A[] | undefined = data1;
+export const generateElements = (normalizedData: NormalizedRank[], value: number, pointName: string): SelectElement[] => {
+  let lastElements: NormalizedRank[] | undefined = normalizedData;
   let selectedName = "select1";
-  let elements: Record<string, B> = {};
+  let elements: Record<string, SelectElement> = {};
 
   while (lastElements !== undefined && lastElements.length !== 0) {
     const currentElements: ReadonlyArray<any> | undefined = lastElements;
@@ -89,7 +89,7 @@ export const generateElements = (data1: A[], value: number, pointName: string): 
             value: item,
             selected: item === value
           }))
-        } as B;
+        } as SelectElement;
       }
     }
 
