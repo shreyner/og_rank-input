@@ -201,7 +201,7 @@ export const LoLMobileRankScheme: RankScheme = {
         {
           name: "DIVISION III",
           points: {
-            count: 5
+            count: 6
           }
         },
         {
@@ -370,5 +370,17 @@ export const LoLRankScheme: RankScheme = {
         }
       ]
     },
+    {
+      name: "Master",
+      points: {
+        count: 1000
+      },
+    },
+    {
+      name: "Challenger",
+      points: {
+        count: 1000
+      },
+    }
   ]
 };
